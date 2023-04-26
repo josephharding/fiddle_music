@@ -1,0 +1,12 @@
+\version "2.24.1"
+
+\header {
+  tagline = ""
+}
+
+\relative {
+  \key g \major
+  \time 6/8
+  g'4. g8 a b
+  a4. a8 b d
+}
