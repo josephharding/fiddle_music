@@ -4,9 +4,25 @@
   tagline = ""
 }
 
-\relative {
-  \key g \major
-  \time 6/8
-  g'4. g8 a b
-  a4. a8 b d
+\layout {
+  indent = 0.0
 }
+
+\relative g' <<
+  \new Staff {
+    \key g \major
+    \time 6/8
+    \bar ".|:-||"
+    % the A part
+    g4. g8 a b | a4. a8 b d | e d d g d d | e d b d b a |
+    \break
+    % liz calls these phrases, this is the second phrase
+    g4. g8 a b | a4. a8 b d | e d d g d b | a g fis g4. \bar "|."
+    \break
+    % the B part
+    \bar ".|:-||"
+    b4. d8 b d | e16 fis g8 e d b g | b4. d8 b g | a4. a8 g a |
+    \break
+    b4. d8 b d | e16 fis g8 e d b d | g e16 fis g8 a g a | b g fis g4. \bar "|."
+  }
+>>
