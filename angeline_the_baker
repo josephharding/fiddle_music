@@ -1,0 +1,36 @@
+\version "2.24.1"
+
+\header {
+  tagline = ""
+}
+
+\layout {
+  indent = 0.0
+}
+
+% Liz plays A twice, B twice, A twice, B in octave shift twice, A twice, B twice
+
+\relative a' <<
+  \new Staff {
+    \key d \major
+    \time 4/4
+    \bar ".|:-||"
+    \sectionLabel "A part"
+    %a4 b d4. a8 | b4 cis2. | a4 b d a | b2 b | 
+    % melodic variation
+    a8 d,8 b'8 d,8 d'4. a8 | b4 cis2. | <a d,>4 <b d,> <d d,> <a d,> | <b d, g,>2 <b d,> | 
+    \break
+    a4 b d4. e8 | fis4 e d4. e8 | fis4 e d b | a2 a
+    \break
+    \bar ".|:-||" 
+    \sectionLabel "B part"
+    a'4 fis e d8 e | fis4 e d2 | a'4 fis e d | b2 b |
+    \break
+    a'4 fis e d8 e | fis4 e d4. e8 | fis4 e d b | a2 a \bar "|."
+    \break
+    \sectionLabel "second B part, down one octave"
+    a4 fis e d8 e | fis4 e d2 | a'4 fis e d | b2 b |
+    \break
+    a'4 fis e d8 e | fis4 e d4. e8 | fis4 e d b | a2 a \bar "|."
+  }
+>>
