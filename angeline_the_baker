@@ -16,9 +16,9 @@
     \time 4/4
     \bar ".|:-||"
     \sectionLabel "A part"
-    %a4 b d4. a8 | b4 cis2. | a4 b d a | b2 b | 
+    a4 b d4. a8 | b4 d2. | a4 b d a | b2 b | 
     % melodic variation
-    a8 d,8 b'8 d,8 d'4. a8 | b4 cis2. | <a d,>4 <b d,> <d d,> <a d,> | <b d, g,>2 <b d,> | 
+    %a8 d,8 b'8 d,8 d'4. a8 | b4 cis2. | <a d,>4 <b d,> <d d,> <a d,> | <b d, g,>2 <b d,> | 
     \break
     a4 b d4. e8 | fis4 e d4. e8 | fis4 e d b | a2 a
     \break

@@ -1,0 +1,36 @@
+\version "2.24.1"
+
+\header {
+  tagline = ""
+}
+
+\layout {
+  indent = 0.0
+}
+
+% 
+% g d a e
+% a e b f
+% b f c g
+% c g d a
+%       b
+
+\relative g' <<
+  \new Staff {
+    \sectionLabel "A part"
+    \key d \major % d major has two sharp notes, c and f, so these have to be written as cis and fis
+    \time 4/4 % will render as C (common time)
+    \partial 8. a8 g8
+    e4 a4 a8 b cis d | e8 fis e8 cis d4 cis8 d8 | e4 a, a8 b8 cis a8 | b8 a8 e8 fis g4 g8 fis8 |
+    \break
+    e4 a4 a8 b8 cis8 d8 | e8 fis8 e8 cis8 d4 cis8 d8 | e8 a4 b8 a8 g8 e8 d4 | cis4 a4 a4
+    \bar ".|:-||"
+    \break
+    \sectionLabel "B part"
+    \partial 8. e8 fis
+    g'8 fis8 g8 a8 g8 fis e fis | g8 fis e cis d4 cis8 d | e4 a,4 a8 b cis a | b8 a e fis g4. fis8
+    \break
+    e4 a a8 b cis d | e fis e cis d4 cis8 d | e8 a4 b8 a8 g e d | cis4 a a
+    \bar ".|:-||"
+  }
+>>
